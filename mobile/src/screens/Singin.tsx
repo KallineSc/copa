@@ -7,7 +7,7 @@ import { useAuth } from "../hooks/useAuth";
 export function SignIn() {
     const { signIn, user } = useAuth();
 
-    console.log('Dados do usuário =>', user);
+    // console.log('Dados do usuário =>', user);
 
     return(
         <Center flex={1} bgColor="gray.900" p={7}>

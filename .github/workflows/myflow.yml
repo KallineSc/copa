@@ -1,0 +1,24 @@
+name: Testes
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+      - feature/autenticacao
+
+jobs:
+  Run-Teste:
+    name: Rodando-Teste
+    timeout-minutes: 1440
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Subindo Aplicação
+        run: docker-compose up --build -d
+
+      - name: Run Robot Tests
+        run: docker-compose exec -T flask_app sh -c 'cd tests && robot suites/autenticacao.robot'  

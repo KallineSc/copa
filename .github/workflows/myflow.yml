@@ -29,4 +29,4 @@ jobs:
               🧬 Alterações: [Aqui!](https://github.com/${{ github.repository }}/commit/${{ github.sha }})
               📦 Deploy: [Aqui!](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})
               📡 Status: ${{ job.status }}
-              📈 Relatórios: [Aqui!](http://200.129.18.20)
+              📈 Relatórios: [Aqui!](172.23.0.2)

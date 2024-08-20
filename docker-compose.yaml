@@ -31,7 +31,7 @@ services:
 
 networks:
   sonar_net:
-    driver: bridge
+  
 volumes:
   sonar_data:
   sonar_logs:

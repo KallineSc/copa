@@ -2,6 +2,7 @@ version: "3.8"
 
 services:
   sonarqube:
+    name: sonarqube
     image: sonarqube:lts-community
     depends_on:
       - db

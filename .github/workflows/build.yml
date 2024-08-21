@@ -21,7 +21,7 @@ jobs:
       - name: Build and start Docker containers on custom network
         run: |
           docker compose up --build -d
-          docker inspect -f '{{.NetworkSettings.Networks}}' sonarqube
+          docker inspect -f '{{.NetworkSettings.Networks}}' copa-sonarqube-1
           docker ps
 
   Sonar-Analise:

@@ -32,7 +32,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
         with:
-          fetch-depth: 0  
+          fetch-depth: 0 
+
+      - name: Docker    
+        run: docker ps 
 
       - name: Run SonarQube analysis
         uses: sonarsource/sonarqube-scan-action@master
@@ -40,5 +43,3 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: http://sonarqube:9000
   
-      - name: Remove Docker network
-        run: docker network rm sonarnet
